@@ -1,0 +1,171 @@
+Row,Column,Value,unit
+Agriculture,1990,179.38,MtCO2e
+Agriculture,1991,177.99,MtCO2e
+Agriculture,1992,173.67,MtCO2e
+Agriculture,1993,171.25,MtCO2e
+Agriculture,1994,173.87,MtCO2e
+Agriculture,1995,169.36,MtCO2e
+Agriculture,1996,160.14,MtCO2e
+Agriculture,1997,159.63,MtCO2e
+Agriculture,1998,165.97,MtCO2e
+Agriculture,1999,197.49,MtCO2e
+Agriculture,2000,214.88,MtCO2e
+Agriculture,2001,233.07,MtCO2e
+Agriculture,2002,218.88,MtCO2e
+Agriculture,2003,140.68,MtCO2e
+Agriculture,2004,183.55,MtCO2e
+Agriculture,2005,141.66,MtCO2e
+Agriculture,2006,178.06,MtCO2e
+Agriculture,2007,169.05,MtCO2e
+Agriculture,2008,135.77,MtCO2e
+Agriculture,2009,143.4,MtCO2e
+Agriculture,2010,118.77,MtCO2e
+Agriculture,2011,220.98,MtCO2e
+Agriculture,2012,221.32,MtCO2e
+Agriculture,2013,141.56,MtCO2e
+Agriculture,2014,163.47,MtCO2e
+Agriculture,2015,154.68,MtCO2e
+Agriculture,2016,122.6,MtCO2e
+Agriculture,2017,165.76,MtCO2e
+Agriculture,2018,163.52,MtCO2e
+Agriculture,2019,130.76,MtCO2e
+Agriculture,2020,108.89,MtCO2e
+Agriculture,2021,128.13,MtCO2e
+Agriculture,2022,132.22,MtCO2e
+Agriculture,2023,214.6,MtCO2e
+Energy,1990,288.71,MtCO2e
+Energy,1991,292.08,MtCO2e
+Energy,1992,296.92,MtCO2e
+Energy,1993,302.55,MtCO2e
+Energy,1994,308.9,MtCO2e
+Energy,1995,321.12,MtCO2e
+Energy,1996,331.9,MtCO2e
+Energy,1997,341.8,MtCO2e
+Energy,1998,363.5,MtCO2e
+Energy,1999,370.12,MtCO2e
+Energy,2000,378.81,MtCO2e
+Energy,2001,388.04,MtCO2e
+Energy,2002,396.36,MtCO2e
+Energy,2003,396.06,MtCO2e
+Energy,2004,410.34,MtCO2e
+Energy,2005,415.62,MtCO2e
+Energy,2006,421.55,MtCO2e
+Energy,2007,434.88,MtCO2e
+Energy,2008,438.43,MtCO2e
+Energy,2009,445.57,MtCO2e
+Energy,2010,454.21,MtCO2e
+Energy,2011,449.75,MtCO2e
+Energy,2012,453.09,MtCO2e
+Energy,2013,450.96,MtCO2e
+Energy,2014,447.4,MtCO2e
+Energy,2015,454.96,MtCO2e
+Energy,2016,461.08,MtCO2e
+Energy,2017,460.57,MtCO2e
+Energy,2018,457.87,MtCO2e
+Energy,2019,455.97,MtCO2e
+Energy,2020,437.72,MtCO2e
+Energy,2021,422.65,MtCO2e
+Energy,2022,414.22,MtCO2e
+Energy,2023,416.29,MtCO2e
+Industrial Processes,1990,11.61,MtCO2e
+Industrial Processes,1991,11.35,MtCO2e
+Industrial Processes,1992,10.9,MtCO2e
+Industrial Processes,1993,10.71,MtCO2e
+Industrial Processes,1994,8.46,MtCO2e
+Industrial Processes,1995,7.64,MtCO2e
+Industrial Processes,1996,6.74,MtCO2e
+Industrial Processes,1997,6.52,MtCO2e
+Industrial Processes,1998,7.48,MtCO2e
+Industrial Processes,1999,7.3,MtCO2e
+Industrial Processes,2000,7.91,MtCO2e
+Industrial Processes,2001,8.77,MtCO2e
+Industrial Processes,2002,9.01,MtCO2e
+Industrial Processes,2003,9.62,MtCO2e
+Industrial Processes,2004,10.24,MtCO2e
+Industrial Processes,2005,10.99,MtCO2e
+Industrial Processes,2006,10.52,MtCO2e
+Industrial Processes,2007,11.17,MtCO2e
+Industrial Processes,2008,11.56,MtCO2e
+Industrial Processes,2009,12.33,MtCO2e
+Industrial Processes,2010,12.58,MtCO2e
+Industrial Processes,2011,13.36,MtCO2e
+Industrial Processes,2012,13.7,MtCO2e
+Industrial Processes,2013,13.66,MtCO2e
+Industrial Processes,2014,14.28,MtCO2e
+Industrial Processes,2015,14.91,MtCO2e
+Industrial Processes,2016,15.22,MtCO2e
+Industrial Processes,2017,15.52,MtCO2e
+Industrial Processes,2018,15.48,MtCO2e
+Industrial Processes,2019,16.48,MtCO2e
+Industrial Processes,2020,16.46,MtCO2e
+Industrial Processes,2021,17.2,MtCO2e
+Industrial Processes,2022,17.78,MtCO2e
+Industrial Processes,2023,18.35,MtCO2e
+"Land Use, Land-Use Change and Forestry",1990,51.97,MtCO2e
+"Land Use, Land-Use Change and Forestry",1991,51.97,MtCO2e
+"Land Use, Land-Use Change and Forestry",1992,51.97,MtCO2e
+"Land Use, Land-Use Change and Forestry",1993,51.97,MtCO2e
+"Land Use, Land-Use Change and Forestry",1994,51.96,MtCO2e
+"Land Use, Land-Use Change and Forestry",1995,52.01,MtCO2e
+"Land Use, Land-Use Change and Forestry",1996,54.48,MtCO2e
+"Land Use, Land-Use Change and Forestry",1997,57.69,MtCO2e
+"Land Use, Land-Use Change and Forestry",1998,55.57,MtCO2e
+"Land Use, Land-Use Change and Forestry",1999,58.21,MtCO2e
+"Land Use, Land-Use Change and Forestry",2000,51.62,MtCO2e
+"Land Use, Land-Use Change and Forestry",2001,64.08,MtCO2e
+"Land Use, Land-Use Change and Forestry",2002,65.58,MtCO2e
+"Land Use, Land-Use Change and Forestry",2003,68.19,MtCO2e
+"Land Use, Land-Use Change and Forestry",2004,61.85,MtCO2e
+"Land Use, Land-Use Change and Forestry",2005,61.76,MtCO2e
+"Land Use, Land-Use Change and Forestry",2006,66.85,MtCO2e
+"Land Use, Land-Use Change and Forestry",2007,63.22,MtCO2e
+"Land Use, Land-Use Change and Forestry",2008,61.46,MtCO2e
+"Land Use, Land-Use Change and Forestry",2009,64.44,MtCO2e
+"Land Use, Land-Use Change and Forestry",2010,61.58,MtCO2e
+"Land Use, Land-Use Change and Forestry",2011,-20.56,MtCO2e
+"Land Use, Land-Use Change and Forestry",2012,-19.87,MtCO2e
+"Land Use, Land-Use Change and Forestry",2013,-18.83,MtCO2e
+"Land Use, Land-Use Change and Forestry",2014,-19.63,MtCO2e
+"Land Use, Land-Use Change and Forestry",2015,-20.45,MtCO2e
+"Land Use, Land-Use Change and Forestry",2016,-15.96,MtCO2e
+"Land Use, Land-Use Change and Forestry",2017,-16.61,MtCO2e
+"Land Use, Land-Use Change and Forestry",2018,-15.79,MtCO2e
+"Land Use, Land-Use Change and Forestry",2019,2.12,MtCO2e
+"Land Use, Land-Use Change and Forestry",2020,-6.82,MtCO2e
+"Land Use, Land-Use Change and Forestry",2021,-11.23,MtCO2e
+"Land Use, Land-Use Change and Forestry",2022,-11.22,MtCO2e
+"Land Use, Land-Use Change and Forestry",2023,-10.65,MtCO2e
+Waste,1990,19.51,MtCO2e
+Waste,1991,19.53,MtCO2e
+Waste,1992,19.39,MtCO2e
+Waste,1993,19.37,MtCO2e
+Waste,1994,18.74,MtCO2e
+Waste,1995,18.91,MtCO2e
+Waste,1996,17.36,MtCO2e
+Waste,1997,17.26,MtCO2e
+Waste,1998,16.51,MtCO2e
+Waste,1999,16.68,MtCO2e
+Waste,2000,16.5,MtCO2e
+Waste,2001,16.59,MtCO2e
+Waste,2002,16.84,MtCO2e
+Waste,2003,15.83,MtCO2e
+Waste,2004,15.39,MtCO2e
+Waste,2005,15.24,MtCO2e
+Waste,2006,14.97,MtCO2e
+Waste,2007,15.21,MtCO2e
+Waste,2008,15.74,MtCO2e
+Waste,2009,15.73,MtCO2e
+Waste,2010,16.11,MtCO2e
+Waste,2011,15.67,MtCO2e
+Waste,2012,14.34,MtCO2e
+Waste,2013,13.53,MtCO2e
+Waste,2014,13.57,MtCO2e
+Waste,2015,13.14,MtCO2e
+Waste,2016,13.47,MtCO2e
+Waste,2017,13.83,MtCO2e
+Waste,2018,13.69,MtCO2e
+Waste,2019,13.53,MtCO2e
+Waste,2020,13.2,MtCO2e
+Waste,2021,13.3,MtCO2e
+Waste,2022,13.42,MtCO2e
+Waste,2023,13.56,MtCO2e
