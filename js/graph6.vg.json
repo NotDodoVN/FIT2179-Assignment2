@@ -1,7 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Radial Chart - Bush Fires by State",
-
+  "title": {
+        "text": "Proportion of bushfires by States",
+        "anchor": "start",
+        "subtitle": "In Australia",
+        "fontSize": 14,
+        "subtitleFontSize": 11,
+        "color": "#e8e6e0",
+        "subtitleColor": "#e8e6e0"
+      },
   "width": 400,
   "height": 225,
 
@@ -46,8 +54,8 @@
           "type": "quantitative",
           "scale": {
             "type": "sqrt",
-            "rangeMin": 30,
-            "rangeMax": 200
+            "rangeMin": 32,
+            "rangeMax": 165
           }
         },
 
@@ -100,7 +108,7 @@
 
   "mark": {
     "type": "text",
-    "radiusOffset": 10,
+    "radiusOffset": 4,
     "fontSize": 11,
     "fontWeight": "bold",
     "color": "#898995"
