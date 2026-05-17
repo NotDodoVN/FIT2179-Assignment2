@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Radial Chart - Bush Fires by State",
+  "width": 400,
+  "height": 225,
   "data": {
     "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_6_wrangled_to_use.csv"
   },
@@ -96,8 +98,6 @@
     "subtitleColor": "#666"
   },
   "view": {"stroke": null},
-  "width": 400,
-  "height": 400,
   "config": {
     "background": "#fafafa",
     "axis": {"grid": false}

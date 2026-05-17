@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Vertical Lollipop Chart - Percentage Change by Year",
+  "width": 400,
+  "height": 225,
   "data": {
     "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_7_wrangled_stuff.csv"
   },
@@ -102,8 +104,6 @@
     "fontSize": 14,
     "color": "#333"
   },
-  "width": 550,
-  "height": 400,
   "config": {
     "background": "#fafafa",
     "view": {"stroke": null}

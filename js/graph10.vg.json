@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 225,
   "title": {
     "text": "Crop Production and Year-on-Year Change (2024-25)",
     "subtitle": "Bars show production volume (kt); line shows percentage change from prior year",
