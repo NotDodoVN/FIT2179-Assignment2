@@ -91,66 +91,39 @@
         ]
       }
     },
-
     {
-      "transform": [
-        {
-          "filter": "datum.Period === '2011-12 to 2015-16'"
-        }
-      ],
-
-      "mark": {
-        "type": "text",
-        "radiusOffset": 10,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#333"
-      },
-
-      "encoding": {
-        "theta": {
-          "field": "States",
-          "type": "nominal",
-          "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
-          "band": 0.5
-        },
-
-        "radius": {
-          "value": 210
-        },
-
-        "text": {
-          "field": "States",
-          "type": "nominal"
-        }
-      }
+  "transform": [
+    {
+      "filter": "datum.Period === '2011-12 to 2015-16'"
     }
   ],
 
-  "title": {
-    "text": "Bush Fire Count by State",
-    "subtitle": "Radial comparison: 2011–16 vs 2016–21",
-    "anchor": "middle",
-    "fontSize": 15,
-    "subtitleFontSize": 11,
-    "color": "#e8e6e0",
-    "subtitleColor": "#e8e6e0"
+  "mark": {
+    "type": "text",
+    "radiusOffset": 10,
+    "fontSize": 11,
+    "fontWeight": "bold",
+    "color": "#898995"
   },
 
-  "view": {
-    "stroke": null
-  },
-
-  "config": {
-    "background": "#fafafa",
-
-    "axis": {
-      "grid": false
+  "encoding": {
+    "theta": {
+      "field": "States",
+      "type": "nominal",
+      "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
+      "band": 0.5
     },
 
-    "legend": {
-      "orient": "right",
-      "direction": "vertical"
+    "radius": {
+      "value": 210
+    },
+
+    "text": {
+      "field": "States",
+      "type": "nominal"
     }
   }
+    
+  }
+]
 }
