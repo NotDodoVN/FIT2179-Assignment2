@@ -13,8 +13,8 @@
         "anchor": "start",
         "fontSize": 14,
         "subtitleFontSize": 11,
-        "color": "#333",
-        "subtitleColor": "#555"
+        "color": "#e8e6e0",
+        "subtitleColor": "#e8e6e0"
       },
       "transform": [
         {

@@ -133,7 +133,8 @@
     "anchor": "middle",
     "fontSize": 15,
     "subtitleFontSize": 11,
-    "subtitleColor": "#666"
+    "color": "#e8e6e0",
+    "subtitleColor": "#e8e6e0"
   },
 
   "view": {

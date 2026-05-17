@@ -55,7 +55,8 @@
         "fontSize": 18,
         "fontWeight": "bold",
         "align": "center",
-        "baseline": "middle"
+        "baseline": "middle",
+        "color": "#e8e6e0"
       },
       "encoding": {
         "text": {
