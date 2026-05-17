@@ -1,0 +1,76 @@
+{
+      "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+      "description": "Annual Rainfall Anomaly",
+      "width": 400,
+      "height": 225,
+
+      "data": {
+        "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph4_i_will_use.csv"
+      },
+      "title": {
+        "text": "Victoria's Annual Rainfall Anomaly",
+        "subtitle": "% compared to 1961–1990 average",
+        "anchor": "start",
+        "fontSize": 14,
+        "subtitleFontSize": 11,
+        "color": "#333",
+        "subtitleColor": "#555"
+      },
+      "transform": [
+        {
+          "calculate": "datum['Percentage change from baseline'] >= 0 ? 'Above average' : 'Below average'",
+          "as": "Direction"
+        },
+        {
+          "calculate": "datetime(datum.Year, 0, 1)",
+          "as": "YearDate"
+        }
+      ],
+      "mark": { "type": "bar", "width": { "band": 0.7 } },
+      "encoding": {
+        "x": {
+          "field": "YearDate",
+          "type": "temporal",
+          "timeUnit": "year",
+          "axis": {
+            "labelAngle": 0,
+            "format": "%Y",
+            "tickCount": { "interval": "year", "step": 5 },
+            "title": null,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Percentage change from baseline",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "tickCount": 5,
+            "grid": true,
+            "gridColor": "#ddd",
+            "domainColor": "#999",
+            "tickColor": "#999",
+            "labelExpr": "datum.value + '%'"
+          },
+          "scale": { "domain": [-50, 45] }
+        },
+        "color": {
+          "field": "Direction",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Above average", "Below average"],
+            "range": ["#3a75c4", "#c8612a"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "Year", "type": "ordinal" },
+          {
+            "field": "Percentage change from baseline",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "% Change"
+          }
+        ]
+      }
+    }
