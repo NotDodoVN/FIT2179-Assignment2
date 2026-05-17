@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Radial Chart - Bush Fires by State",
+  "data": {
+    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_6_wrangled_to_use.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.States !== 'All States'"
+    },
+    {
+      "fold": ["2011-12 to 2015-16", "2016-17 to 2020-21"],
+      "as": ["Period", "Value"]
+    },
+    {
+      "calculate": "toNumber(replace(datum.Value, ',', ''))",
+      "as": "ValueNum"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 30,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "theta": {
+          "field": "States",
+          "type": "nominal",
+          "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
+          "stack": true,
+          "band": 1
+        },
+        "radius": {
+          "field": "ValueNum",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "rangeMin": 30,
+            "rangeMax": 200
+          }
+        },
+        "color": {
+          "field": "Period",
+          "type": "nominal",
+          "scale": {
+            "domain": ["2011-12 to 2015-16", "2016-17 to 2020-21"],
+            "range": ["#e07b39", "#3a75c4"]
+          },
+          "legend": {
+            "title": "Period",
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {"field": "States", "type": "nominal", "title": "State"},
+          {"field": "Period", "type": "nominal", "title": "Period"},
+          {"field": "ValueNum", "type": "quantitative", "title": "Fire Count", "format": ","}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Period === '2011-12 to 2015-16'"}
+      ],
+      "mark": {
+        "type": "text",
+        "radiusOffset": 10,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333"
+      },
+      "encoding": {
+        "theta": {
+          "field": "States",
+          "type": "nominal",
+          "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
+          "band": 0.5
+        },
+        "radius": {
+          "value": 210
+        },
+        "text": {"field": "States", "type": "nominal"}
+      }
+    }
+  ],
+  "title": {
+    "text": "Bush Fire Count by State",
+    "subtitle": "Radial comparison: 2011–16 vs 2016–21",
+    "anchor": "middle",
+    "fontSize": 15,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "view": {"stroke": null},
+  "width": 400,
+  "height": 400,
+  "config": {
+    "background": "#fafafa",
+    "axis": {"grid": false}
+  }
+}

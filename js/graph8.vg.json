@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Water Use by Sector (2022-23)",
+    "subtitle": "Total: 12,495,617 ML",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "subtitleFontSize": 13,
+    "subtitleColor": "gray",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph%208%20-%20wrangled.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum['Sectors'] !== 'Total industry' && datum['Sectors'] !== 'Total of all'"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 80,
+        "outerRadius": 160
+      },
+      "encoding": {
+        "theta": {
+          "field": "Value (Megalitre)",
+          "type": "quantitative",
+          "aggregate": "sum"
+        },
+        "color": {
+          "field": "Sectors",
+          "type": "nominal",
+          "legend": { "title": "Sectors" }
+        },
+        "tooltip": [
+          { "field": "Sectors", "type": "nominal" },
+          {
+            "field": "Value (Megalitre)",
+            "type": "quantitative",
+            "aggregate": "sum",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 0,
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": {
+          "field": "Value (Megalitre)",
+          "type": "quantitative",
+          "aggregate": "sum",
+          "format": ",.0f"
+        }
+      }
+    }
+  ],
+  "view": { "stroke": null },
+  "width": 400,
+  "height": 400
+}

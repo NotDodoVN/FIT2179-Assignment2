@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Vertical Lollipop Chart - Percentage Change by Year",
+  "data": {
+    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_7_wrangled_stuff.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum['Percentage change'] >= 0 ? 'Above' : 'Below'",
+      "as": "Direction"
+    },
+    {
+      "calculate": "0",
+      "as": "Baseline"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "rule", "strokeWidth": 2},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": {
+            "title": null,
+            "labelAngle": 0,
+            "labelFontSize": 10,
+            "labelExpr": "datum.value % 5 === 0 ? datum.label : ''",
+            "grid": false,
+            "ticks": false,
+            "domainColor": "#ccc"
+          }
+        },
+        "y": {"field": "Baseline", "type": "quantitative"},
+        "y2": {"field": "Percentage change"},
+        "color": {
+          "field": "Direction",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Above", "Below"],
+            "range": ["#3a75c4", "#c8612a"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 80},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": {
+            "title": null,
+            "labelAngle": 0,
+            "labelFontSize": 10,
+            "labelExpr": "datum.value % 5 === 0 ? datum.label : ''",
+            "grid": false,
+            "ticks": false,
+            "domainColor": "#ccc"
+          }
+        },
+        "y": {
+          "field": "Percentage change",
+          "type": "quantitative",
+          "title": "% Change",
+          "axis": {
+            "grid": true,
+            "gridColor": "#e0e0e0",
+            "tickCount": 8,
+            "labelExpr": "datum.value + '%'",
+            "domainColor": "#ccc"
+          }
+        },
+        "color": {
+          "field": "Direction",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Above", "Below"],
+            "range": ["#3a75c4", "#c8612a"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Percentage change", "type": "quantitative", "title": "% Change", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "strokeWidth": 1, "strokeDash": [4, 4], "color": "#999"},
+      "encoding": {
+        "y": {"field": "Baseline", "type": "quantitative"}
+      }
+    }
+  ],
+  "title": {
+    "text": "Annual Percentage Change",
+    "anchor": "start",
+    "fontSize": 14,
+    "color": "#333"
+  },
+  "width": 550,
+  "height": 400,
+  "config": {
+    "background": "#fafafa",
+    "view": {"stroke": null}
+  }
+}

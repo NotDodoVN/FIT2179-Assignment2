@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 900,
+  "height": 700,
+  "title": "Intensity of Wildfire across Australia for first half of 2026",
+  "projection": {
+    "type": "mercator"
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/STE_2021_AUST_GDA2020.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f7f7f7",
+        "stroke": "black",
+        "strokeWidth": 0.7
+      }
+    },
+
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/fire_nrt_SV-C2_750846.csv"
+      },
+
+      "mark": {
+        "type": "circle",
+        "opacity": 0.7,
+        "size": 18
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "brightness",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "redblue",
+            "reverse": true
+          },
+          "title": "Fire Brightness"
+        },
+
+        "tooltip": [
+          {
+            "field": "brightness",
+            "type": "quantitative"
+          },
+          {
+            "field": "acq_date",
+            "type": "temporal",
+            "title": "Date"
+          }
+        ]
+      }
+    }
+  ]
+}
