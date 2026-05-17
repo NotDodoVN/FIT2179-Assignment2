@@ -44,38 +44,6 @@
           { "field": "Production kt", "type": "quantitative" }
         ]
       }
-    },
-    {
-      "mark": {
-        "type": "line",
-        "color": "#F58518",
-        "strokeWidth": 2.5,
-        "point": {
-          "filled": true,
-          "fill": "#F58518",
-          "size": 80
-        }
-      },
-      "encoding": {
-        "x": {
-          "field": "Crop",
-          "type": "nominal"
-        },
-        "y": {
-          "field": "Production Change (%)",
-          "type": "quantitative",
-          "axis": {
-            "title": "Production Change (%)",
-            "titleColor": "#F58518"
-          }
-        },
-        "tooltip": [
-          { "field": "Crop", "type": "nominal" },
-          { "field": "Production Change (%)", "type": "quantitative" }
-        ]
-      }
     }
-  ],
-  "width": 500,
-  "height": 350
+  ]
 }
