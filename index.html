@@ -152,7 +152,7 @@
 <header class="hero">
   <p class="hero-eyebrow">Australia · Data Visualisation · 2024–2026</p>
   <h1>A <em>Chain Reaction</em><br/>Reshaping Australia</h1>
-  <p class="hero-sub">From the smokestacks to the dinner table — how greenhouse gas emissions are driving a cascade of heat, wildfire, water stress, and failing harvests across the continent.</p>
+  <p class="hero-sub">From the smokestacks to the dinner table — how greenhouse gas emissions are driving a cascade of heat, wildfire, water stress, and failing harvests across Australia.</p>
   <div class="chain">
     <div class="chain-step emissions"><div class="chain-dot">🏭</div><span>Emissions</span></div>
     <div class="chain-arrow">→</div>
@@ -178,13 +178,13 @@
   </div>
 </section>
 <div class="stat-row">
-  <div class="stat-box e"><span class="stat-num">~500</span><span class="stat-label">Mt CO₂e<br/>annual emissions</span></div>
+  <div class="stat-box e"><span class="stat-num">~500</span><span class="stat-label">MtCO₂e<br/>annual emissions</span></div>
   <div class="stat-box e"><span class="stat-num">14th</span><span class="stat-label">Largest emitter<br/>globally</span></div>
   <div class="stat-box e"><span class="stat-num">43%</span><span class="stat-label">Paris target<br/>cut by 2030</span></div>
 </div>
 <div class="chart-grid two-col">
   <div class="chart-card emissions"><div class="vega-wrap" id="g1"></div><p class="chart-annotation">Stacked area by industry sector — energy generation and agriculture dominate cumulative output over time.</p></div>
-  <div class="chart-card emissions"><div class="vega-wrap" id="g2"></div><p class="chart-annotation">Australia's trajectory versus the Paris Convention's 2030 target. Historical solid line; projected dashed.</p></div>
+  <div class="chart-card emissions"><div class="vega-wrap" id="g2"></div><p class="chart-annotation">Australia's trajectory versus the Paris Convention's 2030 target.</p></div>
 </div>
 <div class="callout"><p><strong>Energy generation alone accounts for roughly one-third of total emissions.</strong> Agriculture adds another 15% through livestock methane and land clearing. Without structural change, the 2030 Paris target of −43% from 2005 levels remains out of reach.</p></div>
 
@@ -201,7 +201,7 @@
 </section>
 <div class="stat-row">
   <div class="stat-box h"><span class="stat-num">+1.5°C</span><span class="stat-label">Warming since<br/>pre-industrial</span></div>
-  <div class="stat-box h"><span class="stat-num">−11%</span><span class="stat-label">Rainfall decline<br/>SE Australia</span></div>
+  <div class="stat-box h"><span class="stat-num">−11%</span><span class="stat-label">Rainfall decline<br/>SouthEast Australia</span></div>
   <div class="stat-box h"><span class="stat-num">3×</span><span class="stat-label">Extreme heat<br/>days since 1960</span></div>
 </div>
 <div class="chart-grid two-col">
@@ -221,14 +221,17 @@
     </div>
   </div>
 </section>
-<div class="chart-grid">
-  <div class="chart-card fire"><div class="vega-wrap" id="g5" style="min-height:290px;"></div><p class="chart-annotation">MODIS satellite fire detection for H1 2026 — brightness temperature indicates fire intensity. Hotspots cluster across northern and eastern Australia.</p></div>
-</div>
+
 <div class="chart-grid two-col">
-  <div class="chart-card fire"><div class="vega-wrap" id="g6"></div><p class="chart-annotation">State-by-state bushfire counts across two five-year periods. NT and Queensland consistently lead in raw count.</p></div>
-  <div class="chart-card fire"><div class="vega-wrap" id="g7"></div><p class="chart-annotation">Year-on-year percentage change in fire activity. Spikes correlate directly with the drought years shown above.</p></div>
+  <div class="chart-card fire"><div class="vega-wrap" id="g5" style="min-height:320px;"></div>
+    <p class="chart-annotation">MODIS satellite fire detection for H1 2026 — brightness temperature indicates fire intensity. Hotspots cluster across northern and eastern Australia.</p>
+  </div>
+  <div class="chart-card fire"><div class="vega-wrap" id="g6"></div>
+    <p class="chart-annotation">State-by-state bushfire counts across two five-year periods. NT and Queensland consistently lead in raw count.</p>
+  </div>
 </div>
-<div class="callout"><p><strong>Fire does not just destroy ecosystems — it releases stored carbon,</strong> creating a feedback loop that accelerates further warming. Fires also contaminate catchments, reduce water quality, and devastate agricultural infrastructure — directly linking this chapter to the water crisis that follows.</p></div>
+
+
 
 <!-- CH4 WATER -->
 <section class="chapter">
@@ -241,10 +244,16 @@
     </div>
   </div>
 </section>
-<div class="chart-grid">
-  <div class="chart-card water"><div class="vega-wrap" id="g8" style="min-height:260px;"></div><p class="chart-annotation">Australia's water use by sector in 2022–23. Agriculture accounts for over 70% of total use — making it acutely vulnerable to drought and water restrictions.</p></div>
+
+<div class="chart-grid two-col">
+  <div class="chart-card water"><div class="vega-wrap" id="g7" style ="min-height:320px;" ></div>
+    <p class="chart-annotation">Year-on-year percentage change in fire activity. Spikes correlate directly with the drought years shown above.</p>
+  </div>
+  <div class="chart-card water"><div class="vega-wrap" id="g8"></div>
+    <p class="chart-annotation">Australia's water use by sector in 2022–23. Agriculture accounts for over 70% of total use — making it acutely vulnerable to drought and water restrictions.</p>
+  </div>
 </div>
-<div class="callout"><p><strong>Agriculture consumes more water than all other sectors combined.</strong> As rivers run lower and dam levels drop, irrigation restrictions directly translate into reduced crop yields. The water scarcity born from heat and fire now squeezes the food system from below.</p></div>
+
 
 <!-- CH5 FOOD -->
 <section class="chapter">
@@ -270,6 +279,7 @@
     <p>Data from Australia's National Greenhouse Gas Inventory, Bureau of Meteorology, MODIS/NASA satellite, Australian Bureau of Statistics, and ABARES. Visualisations via Vega-Lite v5.</p>
   </div>
   <div class="footer-mono">
+    <p>Made by DO KHAM HUY ©All rights reserves</p>
     <p>FIT2179 Assignment 2</p>
     <p style="margin-top:4px;">Built with Vega-Lite · 2026</p>
   </div>
@@ -344,15 +354,6 @@ load('g4','graph4.vg.json', s => {
 });
 
 /* G5 — Fire map */
-// load('g5','graph5.vg.json', s => {
-//   s.height = 290;
-//   if (s.layer?.[0]?.mark) { s.layer[0].mark.fill="#1e1e26"; s.layer[0].mark.stroke="rgba(255,255,255,0.15)"; }
-//   if (s.layer?.[1]?.encoding?.color) {
-//     s.layer[1].encoding.color.scale = { scheme:"orangered", reverse:false };
-//   }
-//   return s;
-// });
-
 load('g5','graph5.vg.json', s => {
   s.height = 320;                    // Slightly taller for better map presence
   
@@ -469,20 +470,52 @@ load('g8','graph8.vg.json', s => {
 /* G9 — Crop 25-26 */
 load('g9','graph9.vg.json', s => {
   s.height = 210;
+  
   s.layer && s.layer.forEach(l => {
-    if (l.mark?.type==="bar") l.mark.color="#4a8c5c";
-    if (l.mark?.type==="line") { l.mark.color="#c9943a"; if(l.mark.point) l.mark.point.fill="#c9943a"; }
+    if (l.mark?.type==="bar") {
+      l.mark.color = "#4a8c5c";        // Production (kt) bars — neutral grey
+    }
+    if (l.mark?.type==="line") { 
+      l.mark.color = "#c9943a"; 
+      if(l.mark.point) l.mark.point.fill = "#c9943a"; 
+    }
   });
+
+  // Make "Production (kt)" title color match "Crop" x-axis title
+  const barLayer = s.layer?.find(layer => layer.mark?.type === "bar");
+  if (barLayer?.encoding?.y?.axis) {
+    barLayer.encoding.y.axis.titleColor = "#8a8a96";   // Same as x-axis "Crop"
+  }
+
   return s;
 });
 
 /* G10 — Crop 24-25 */
 load('g10','graph10.vg.json', s => {
   s.height = 210;
+  
   s.layer && s.layer.forEach(l => {
-    if (l.mark?.type==="bar") l.mark.color="#4a8c5c";
-    if (l.mark?.type==="line") { l.mark.color="#c9943a"; if(l.mark.point) l.mark.point.fill="#c9943a"; }
+    if (l.mark?.type==="bar") {
+      l.mark.color = "#4a8c5c";        // Production (kt) bars — neutral grey
+    }
+    if (l.mark?.type==="line") { 
+      l.mark.color = "#c9943a"; 
+      if(l.mark.point) l.mark.point.fill = "#c9943a"; 
+    }
   });
+
+  // Make "Production (kt)" title color match "Crop" x-axis title
+  const barLayer = s.layer?.find(layer => layer.mark?.type === "bar");
+  if (barLayer?.encoding?.y?.axis) {
+    barLayer.encoding.y.axis.titleColor = "#8a8a96";   // Same as x-axis "Crop"
+  }
+
+  // Y-axis ticks
+  if (barLayer?.encoding?.y?.axis) {
+    barLayer.encoding.y.axis.values = [0, 1000, 2000, 3000, 4000];
+    barLayer.encoding.y.scale = { domain: [0, 4200] };
+  }
+
   return s;
 });
 </script>

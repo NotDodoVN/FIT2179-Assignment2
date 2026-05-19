@@ -4,7 +4,7 @@
   "height": 225,
   "title": {
     "text": "Projected Crop Production and Year-on-Year Change (2025-26)",
-    "subtitle": "Bars show production volume (kt); line shows percentage change from prior year",
+    "subtitle": "Bars show production volume (kt)",
     "fontSize": 16,
     "fontWeight": "bold",
     "subtitleFontSize": 12,
@@ -21,7 +21,6 @@
     {
       "mark": {
         "type": "bar",
-        "color": "#4C78A8",
         "cornerRadiusTopLeft": 4,
         "cornerRadiusTopRight": 4
       },
@@ -35,8 +34,7 @@
           "field": "Production (kt)",
           "type": "quantitative",
           "axis": {
-            "title": "Production (kt)",
-            "titleColor": "#4C78A8"
+            "title": "Production (kt)"
           }
         },
         "tooltip": [
