@@ -1,16 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Polar chart of Australian bushfire incidents by state, log base-5 scaled radius, state labels at outer edge.",
+  "description": "Polar chart of Australian bushfire incidents by state, log base-5 scaled radius, styled for dark fire-theme website.",
   "title": {
-    "text": "Bushfire incidents by state & period (log₅ scale)",
-    "subtitle": "Radius = log₅(incidents) — each unit = ×5 more incidents",
-    "anchor": "middle",
+    "text": "Bushfire Incidents by State & Period",
+    "subtitle": "Radius = log₅(incidents)  ·  inner = 2011–16  ·  outer = 2016–21",
+    "anchor": "start",
     "fontSize": 13,
     "subtitleFontSize": 11,
-    "color": "#2C2C2A",
-    "subtitleColor": "#5F5E5A",
+    "font": "'Playfair Display', serif",
+    "subtitleFont": "'DM Sans', sans-serif",
+    "color": "#e8e6e0",
+    "subtitleColor": "#6b6b78",
     "offset": 10
   },
+  "background": "transparent",
+  "width": 300,
+  "height": 270,
   "data": {
     "values": [
       {"State": "ACT",  "Period": "2011–16", "Incidents": 17,    "Log5": 1.760},
@@ -31,14 +36,12 @@
       {"State": "WA",   "Period": "2016–21", "Incidents": 4334,  "Log5": 5.203}
     ]
   },
-  "width": 400,
-  "height": 225,
   "layer": [
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 12,
-        "stroke": "#ffffff",
+        "innerRadius": 14,
+        "stroke": "#1a1a20",
         "strokeWidth": 1.5
       },
       "encoding": {
@@ -55,8 +58,8 @@
           "scale": {
             "type": "linear",
             "domain": [0, 7.0],
-            "rangeMin": 12,
-            "rangeMax": 140
+            "rangeMin": 14,
+            "rangeMax": 130
           }
         },
         "color": {
@@ -64,16 +67,25 @@
           "type": "nominal",
           "scale": {
             "domain": ["2011–16", "2016–21"],
-            "range": ["#378ADD", "#D85A30"]
+            "range": ["#c9943a", "#e85d26"]
           },
           "legend": {
             "title": "Period",
             "orient": "bottom",
             "direction": "horizontal",
-            "titleFontSize": 11,
+            "titleFontSize": 10,
+            "titleFont": "'DM Sans', sans-serif",
+            "titleColor": "#8a8a96",
+            "labelFont": "'DM Mono', monospace",
             "labelFontSize": 10,
-            "offset": 10
+            "labelColor": "#8a8a96",
+            "symbolSize": 80,
+            "offset": 8
           }
+        },
+        "opacity": {
+          "condition": {"param": "hover", "value": 1},
+          "value": 0.85
         },
         "order": {
           "field": "Period",
@@ -83,9 +95,15 @@
           {"field": "State",     "type": "nominal",      "title": "State"},
           {"field": "Period",    "type": "nominal",      "title": "Period"},
           {"field": "Incidents", "type": "quantitative", "title": "Incidents",       "format": ","},
-          {"field": "Log5",      "type": "quantitative", "title": "log₅(incidents)", "format": ".3f"}
+          {"field": "Log5",      "type": "quantitative", "title": "log₅(incidents)", "format": ".2f"}
         ]
-      }
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+        }
+      ]
     },
     {
       "transform": [
@@ -95,8 +113,9 @@
         "type": "text",
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#2C2C2A",
-        "radiusOffset": 110
+        "font": "'DM Mono', monospace",
+        "color": "#8a8a96",
+        "radiusOffset": 100
       },
       "encoding": {
         "theta": {
@@ -106,14 +125,15 @@
           "stack": true,
           "band": 0.5
         },
-        "radius": {"value": 152},
+        "radius": {"value": 143},
         "text": {"field": "State", "type": "nominal"}
       }
     }
   ],
-  "view": {"stroke": null},
-  "background": "#fafaf8",
+  "view": {"stroke": "transparent", "fill": "transparent"},
   "config": {
-    "arc": {"padAngle": 0.03}
+    "background": "transparent",
+    "arc": {"padAngle": 0.03},
+    "font": "'DM Sans', sans-serif"
   }
 }
