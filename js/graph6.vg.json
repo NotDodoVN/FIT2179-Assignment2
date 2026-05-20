@@ -80,7 +80,10 @@
             "labelFontSize": 10,
             "labelColor": "#8a8a96",
             "symbolSize": 80,
-            "offset": 8
+            "symbolType": "circle",
+            "offset": 12,
+            "padding": 6,
+            "titlePadding": 4
           }
         },
         "opacity": {
@@ -134,6 +137,19 @@
   "config": {
     "background": "transparent",
     "arc": {"padAngle": 0.03},
-    "font": "'DM Sans', sans-serif"
+    "font": "'DM Sans', sans-serif",
+    "legend": {
+      "orient": "bottom",
+      "direction": "horizontal",
+      "titleColor": "#8a8a96",
+      "labelColor": "#8a8a96",
+      "titleFont": "'DM Sans', sans-serif",
+      "labelFont": "'DM Mono', monospace",
+      "titleFontSize": 10,
+      "labelFontSize": 10,
+      "symbolSize": 80,
+      "symbolType": "circle",
+      "offset": 12
+    }
   }
 }

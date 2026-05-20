@@ -386,59 +386,29 @@ load('g5','graph5.vg.json', s => {
 
 
 /* G6 — Radial fire (Legend pushed far right) */
-load('g6','graph6.vg.json', s => {
-  s.height = 290;
-  s.width = 380;                    // Wider canvas to give more room on the right
-  
-  // Background
-  if (!s.config) s.config = {};
-  s.config.background = "#1B1B21";
-  s.view = { fill: "#1B1B21", stroke: "transparent" };
-
-  // Period colors
-  if (s.layer?.[0]?.encoding?.color) {
-    s.layer[0].encoding.color.scale = { 
-      domain: ["2011-12 to 2015-16","2016-17 to 2020-21"], 
-      range: ["#c9943a","#e85d26"] 
-    };
-  }
-
-  // === PUSH LEGEND TO THE FAR RIGHT (Green Area) ===
-  if (!s.config.legend) s.config.legend = {};
-  Object.assign(s.config.legend, {
-    orient: "right",
-    padding: 10,
-    offset: -20,           // Negative offset pulls it closer to the right edge
-    labelColor: "#d4d4d9",
-    titleColor: "#e8e6e0",
-    titleFont: "'DM Sans', sans-serif",
-    labelFont: "'DM Mono', monospace",
-    titleFontSize: 12,
-    labelFontSize: 11,
-    symbolSize: 100,
-    columnPadding: 8,
-    titlePadding: 6
-  });
-
-  // Fix small state labels
-  if (s.layer?.[1]) {
-    s.layer[1].mark = {
-      type: "text",
-      radiusOffset: 39,
-      fontSize: 11.5,
-      fontWeight: "bold",
-      color: "#d4d4d9"
-    };
-    s.layer[1].encoding.radius = {
-      field: "ValueNum",
-      type: "quantitative",
-      scale: { type: "sqrt" }
-    };
-  }
-
+/* G6 — Polar fire chart */
+load('g6', 'graph6.vg.json', s => {
+  s.width = "container";
   return s;
 });
 
+// load('g6', 'graph6.vg.json', s => {
+//   s.height = 210;
+//   s.width = 330;
+//   s.config = s.config || {};
+//   s.config.background = "transparent";
+//   s.view = { fill: "transparent", stroke: "transparent" };
+
+//   // Fix colors — must match en-dash domain in the spec ("2011–16", "2016–21")
+//   if (s.layer?.[0]?.encoding?.color) {
+//     s.layer[0].encoding.color.scale = {
+//       domain: ["2011–16", "2016–21"],
+//       range:  ["#c9943a", "#e85d26"]
+//     };
+//   }
+
+//   return s;
+// });
 
 /* G7 — Lollipop */
 load('g7','graph7.vg.json', s => {
