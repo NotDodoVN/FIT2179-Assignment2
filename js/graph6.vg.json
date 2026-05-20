@@ -1,137 +1,119 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Radial Chart - Bush Fires by State",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Polar chart of Australian bushfire incidents by state, log base-5 scaled radius, state labels at outer edge.",
   "title": {
-        "text": "Proportion of bushfires by States",
-        "anchor": "start",
-        "subtitle": "In Australia",
-        "fontSize": 14,
-        "subtitleFontSize": 11,
-        "color": "#e8e6e0",
-        "subtitleColor": "#e8e6e0"
-      },
+    "text": "Bushfire incidents by state & period (log₅ scale)",
+    "subtitle": "Radius = log₅(incidents) — each unit = ×5 more incidents",
+    "anchor": "middle",
+    "fontSize": 13,
+    "subtitleFontSize": 11,
+    "color": "#2C2C2A",
+    "subtitleColor": "#5F5E5A",
+    "offset": 10
+  },
+  "data": {
+    "values": [
+      {"State": "ACT",  "Period": "2011–16", "Incidents": 17,    "Log5": 1.760},
+      {"State": "ACT",  "Period": "2016–21", "Incidents": 87,    "Log5": 2.775},
+      {"State": "NSW",  "Period": "2011–16", "Incidents": 1766,  "Log5": 4.645},
+      {"State": "NSW",  "Period": "2016–21", "Incidents": 5635,  "Log5": 5.366},
+      {"State": "NT",   "Period": "2011–16", "Incidents": 45565, "Log5": 6.665},
+      {"State": "NT",   "Period": "2016–21", "Incidents": 34718, "Log5": 6.496},
+      {"State": "Qld",  "Period": "2011–16", "Incidents": 49902, "Log5": 6.721},
+      {"State": "Qld",  "Period": "2016–21", "Incidents": 30323, "Log5": 6.412},
+      {"State": "SA",   "Period": "2011–16", "Incidents": 302,   "Log5": 3.548},
+      {"State": "SA",   "Period": "2016–21", "Incidents": 217,   "Log5": 3.343},
+      {"State": "Tas.", "Period": "2011–16", "Incidents": 208,   "Log5": 3.316},
+      {"State": "Tas.", "Period": "2016–21", "Incidents": 234,   "Log5": 3.390},
+      {"State": "Vic.", "Period": "2011–16", "Incidents": 1025,  "Log5": 4.307},
+      {"State": "Vic.", "Period": "2016–21", "Incidents": 1878,  "Log5": 4.684},
+      {"State": "WA",   "Period": "2011–16", "Incidents": 7022,  "Log5": 5.503},
+      {"State": "WA",   "Period": "2016–21", "Incidents": 4334,  "Log5": 5.203}
+    ]
+  },
   "width": 400,
   "height": 225,
-
-  "data": {
-    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_6_wrangled_to_use.csv"
-  },
-
-  "transform": [
-    {
-      "filter": "datum.States !== 'All States'"
-    },
-    {
-      "fold": ["2011-12 to 2015-16", "2016-17 to 2020-21"],
-      "as": ["Period", "Value"]
-    },
-    {
-      "calculate": "toNumber(replace(datum.Value, ',', ''))",
-      "as": "ValueNum"
-    }
-  ],
-
   "layer": [
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 30,
-        "stroke": "white",
+        "innerRadius": 12,
+        "stroke": "#ffffff",
         "strokeWidth": 1.5
       },
-
       "encoding": {
         "theta": {
-          "field": "States",
+          "field": "State",
           "type": "nominal",
-          "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
+          "sort": ["ACT", "NSW", "NT", "Qld", "SA", "Tas.", "Vic.", "WA"],
           "stack": true,
           "band": 1
         },
-
         "radius": {
-          "field": "ValueNum",
+          "field": "Log5",
           "type": "quantitative",
           "scale": {
-            "type": "sqrt",
-            "rangeMin": 32,
-            "rangeMax": 165
+            "type": "linear",
+            "domain": [0, 7.0],
+            "rangeMin": 12,
+            "rangeMax": 140
           }
         },
-
         "color": {
           "field": "Period",
           "type": "nominal",
-
           "scale": {
-            "domain": ["2011-12 to 2015-16", "2016-17 to 2020-21"],
-            "range": ["#e07b39", "#3a75c4"]
+            "domain": ["2011–16", "2016–21"],
+            "range": ["#378ADD", "#D85A30"]
           },
-
           "legend": {
             "title": "Period",
-            "orient": "right",
-            "direction": "vertical",
-            "labelFontSize": 11,
-            "titleFontSize": 12,
-            "symbolType": "circle",
-            "padding": 10
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontSize": 11,
+            "labelFontSize": 10,
+            "offset": 10
           }
         },
-
+        "order": {
+          "field": "Period",
+          "sort": ["2011–16", "2016–21"]
+        },
         "tooltip": [
-          {
-            "field": "States",
-            "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "Period",
-            "type": "nominal",
-            "title": "Period"
-          },
-          {
-            "field": "ValueNum",
-            "type": "quantitative",
-            "title": "Fire Count",
-            "format": ","
-          }
+          {"field": "State",     "type": "nominal",      "title": "State"},
+          {"field": "Period",    "type": "nominal",      "title": "Period"},
+          {"field": "Incidents", "type": "quantitative", "title": "Incidents",       "format": ","},
+          {"field": "Log5",      "type": "quantitative", "title": "log₅(incidents)", "format": ".3f"}
         ]
       }
     },
     {
-  "transform": [
-    {
-      "filter": "datum.Period === '2011-12 to 2015-16'"
+      "transform": [
+        {"filter": {"field": "Period", "equal": "2016–21"}}
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#2C2C2A",
+        "radiusOffset": 110
+      },
+      "encoding": {
+        "theta": {
+          "field": "State",
+          "type": "nominal",
+          "sort": ["ACT", "NSW", "NT", "Qld", "SA", "Tas.", "Vic.", "WA"],
+          "stack": true,
+          "band": 0.5
+        },
+        "radius": {"value": 152},
+        "text": {"field": "State", "type": "nominal"}
+      }
     }
   ],
-
-  "mark": {
-    "type": "text",
-    "radiusOffset": 4,
-    "fontSize": 11,
-    "fontWeight": "bold",
-    "color": "#898995"
-  },
-
-  "encoding": {
-    "theta": {
-      "field": "States",
-      "type": "nominal",
-      "sort": ["NT", "Qld", "WA", "NSW", "Vic.", "SA", "Tas.", "ACT"],
-      "band": 0.5
-    },
-
-    "radius": {
-      "value": 210
-    },
-
-    "text": {
-      "field": "States",
-      "type": "nominal"
-    }
+  "view": {"stroke": null},
+  "background": "#fafaf8",
+  "config": {
+    "arc": {"padAngle": 0.03}
   }
-    
-  }
-]
 }

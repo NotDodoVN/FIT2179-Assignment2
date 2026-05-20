@@ -2,7 +2,7 @@
       "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
       "description": "Line Chart with gradient shade",
       "title": {
-        "text": "Victoria's Average temperature fluctuation",
+        "text": "Victoria's Average highest temperature yearly fluctuation",
         "subtitle": "°C fluctuation",
         "anchor": "start",
         "fontSize": 14,
