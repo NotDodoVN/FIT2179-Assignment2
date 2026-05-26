@@ -322,12 +322,8 @@ function load(id, file, patch) {
 }
 
 /* G1 — Emissions stacked area */
-load('g1','graph1.vg.json', s => {
-  s.height = 210;
-  s.width = 330;
-  s.encoding.color.scale = { 
-    range: ["#404052", "#C94503", "#3b3b4a", "#454557", "#E85E0F"]
-   };
+load('g1','test2.vg.json', s => {
+
   return s;
 });
 
