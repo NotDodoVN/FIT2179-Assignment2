@@ -1,64 +1,72 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
-        "text": "Australia's emission by sector",
-        "anchor": "start",
-        "subtitle": "MtCO₂e",
-        "fontSize": 14,
-        "subtitleFontSize": 11,
-        "color": "#e8e6e0",
-        "subtitleColor": "#e8e6e0"
-      },
-      "width": 400,
-      "height": 225,
-      "data": {
-        "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_1%20-%20Copy.csv",
-        "format": {"type": "csv"}
-      },
-      "params": [
-        {
-          "name": "hoverGraph1",
-          "select": {
-            "type": "point",
-            "fields": ["INDUSTRY"],
-            "on": "mouseover",
-            "clear": "mouseout"
-          }
-        }
-      ],
-      "mark": {"type": "area", "line": true, "opacity": 0.8},
-      "encoding": {
-        "x": {"field": "YEAR", "type": "temporal", "title": "Year"},
-        "y": {
-          "aggregate": "sum",
-          "field": "VALUE",
-          "type": "quantitative",
-          "stack": "zero",
-          "title": "Emission (MtCO₂e)"
-        },
-        "color": {
-          "field": "INDUSTRY",
-          "type": "nominal",
-          "title": "Industry",
-          "legend": {"labelFontSize": 10}
-        },
-        "tooltip": [
-          {"field": "INDUSTRY", "title": "Industry"},
-          {
-            "field": "YEAR",
-            "type": "temporal",
-            "format": "%Y",
-            "title": "Year"
-          },
-          {
-            "field": "VALUE",
-            "type": "quantitative",
-            "title": "CO₂ Emission (MtCO₂e)"
-          }
-        ],
-        "opacity": {
-          "condition": {"param": "hoverGraph1", "value": 1},
-          "value": 0.3
-        }
+    "text": "Australia's emission by sector",
+    "anchor": "start",
+    "subtitle": "MtCO₂e",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "color": "#e8e6e0",
+    "subtitleColor": "#e8e6e0"
+  },
+  "width": 400,
+  "height": 225,
+  "data": {
+    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_1%20-%20Copy.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "hoverGraph1",
+      "select": {
+        "type": "point",
+        "fields": ["INDUSTRY"],
+        "on": "mouseover",
+        "clear": "mouseout"
       }
+    }
+  ],
+  "mark": {"type": "area", "line": true, "opacity": 0.85},
+  "encoding": {
+    "x": {"field": "YEAR", "type": "temporal", "title": "Year"},
+    "y": {
+      "aggregate": "sum",
+      "field": "VALUE",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Emission (MtCO₂e)"
+    },
+    "color": {
+      "field": "INDUSTRY",
+      "type": "nominal",
+      "title": "Industry",
+      "scale": {
+        "domain": [
+          "Energy",
+          "Agriculture",
+          "Industrial Processes",
+          "Waste",
+          "Land Use and others"
+        ],
+
+        "range": [
+          "#C9943B",     // Energy - Strong orange-red (hue)
+          "#dfbf8a",     // Agriculture - Light teal (high luminance)
+          "#94a3b8",     // Industrial Processes - Medium teal
+          "#f1f5f9",     // Waste 
+          "#475569"      // Land Use and others - Dark teal (low luminance)
+        ]
+      },
+      "legend": {"labelFontSize": 10}
+    },
+    "tooltip": [
+      {"field": "INDUSTRY", "title": "Industry"},
+      {"field": "YEAR", "type": "temporal", "format": "%Y", "title": "Year"},
+      {"field": "VALUE", "type": "quantitative", "title": "CO₂ Emission (MtCO₂e)"}
+    ],
+    "opacity": {
+      "condition": {"param": "hoverGraph1", "value": 1},
+      "value": 0.3
+    }
+  }
 }
