@@ -1,65 +1,78 @@
 {
-      "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-      "description": "Line Chart with gradient shade",
-      "title": {
-        "text": "Victoria's Average highest temperature yearly fluctuation",
-        "subtitle": "°C fluctuation",
-        "anchor": "start",
-        "fontSize": 14,
-        "subtitleFontSize": 11,
-        "color": "#e8e6e0",
-        "subtitleColor": "#e8e6e0"
-      },
-      "width": 400,
-      "height": 225,
-      "data": {
-        "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_3_to_use.csv"
-      },
-      "transform": [
-        {
-          "fold": ["Average"],
-          "as": ["Station", "Value"]
-        },
-        {
-          "filter": "datum.Value !== null && datum.Value !== ''"
-        }
-      ],
-      "layer": [
-        {
-          "mark": {
-            "type": "area",
-            "opacity": 0.1,
-            "color": "#d62728",
-            "line": false
-          },
-          "encoding": {
-            "x": { "field": "Year", "type": "temporal" },
-            "y": { "field": "Value", "type": "quantitative" }
-          }
-        },
-        {
-          "mark": { "type": "line", "stroke": "white", "strokeWidth": 4 },
-          "encoding": {
-            "x": { "field": "Year", "type": "temporal" },
-            "y": {
-              "field": "Value",
-              "type": "quantitative",
-              "title": "Temperature"
-            },
-            "detail": { "field": "Station", "type": "nominal" }
-          }
-        },
-        {
-          "mark": { "type": "line", "color": "firebrick", "strokeWidth": 2 },
-          "encoding": {
-            "x": { "field": "Year", "type": "temporal" },
-            "y": {
-              "field": "Value",
-              "type": "quantitative",
-              "title": "Temperature"
-            },
-            "stroke": { "value": "firebrick" }
-          }
-        }
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Line Chart with gradient shade",
+  "title": {
+    "text": "Victoria's Average highest temperature yearly fluctuation",
+    "subtitle": "°C fluctuation",
+    "anchor": "start",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "color": "#e8e6e0",
+    "subtitleColor": "#e8e6e0"
+  },
+  "width": 400,
+  "height": 225,
+  "data": {
+    "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph_3_to_use.csv"
+  },
+  "transform": [
+    {
+      "fold": ["Average"],
+      "as": ["Station", "Value"]
+    },
+    {
+      "filter": "datum.Value !== null && datum.Value !== ''"
     }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.1,
+        "color": "#d62728",
+        "line": false
+      },
+      "encoding": {
+        "x": { "field": "Year", "type": "temporal" },
+        "y": { "field": "Value", "type": "quantitative" }
+      }
+    },
+    {
+      "mark": { "type": "line", "stroke": "white", "strokeWidth": 4 },
+      "encoding": {
+        "x": { "field": "Year", "type": "temporal" },
+        "y": { "field": "Value", "type": "quantitative" },
+        "detail": { "field": "Station", "type": "nominal" }
+      }
+    },
+    {
+      "mark": { 
+        "type": "line", 
+        "color": "firebrick", 
+        "strokeWidth": 2 
+      },
+      "encoding": {
+        "x": { "field": "Year", "type": "temporal" },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Temperature (°C)"
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "temporal",
+            "format": "%Y",
+            "title": "Year"
+          },
+          {
+            "field": "Value",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Avg Highest Temp (°C)"
+          }
+        ]
+      }
+    }
+  ]
+}
