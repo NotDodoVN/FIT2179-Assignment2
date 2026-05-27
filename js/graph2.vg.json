@@ -33,7 +33,7 @@
               "field": "series",
               "type": "nominal",
               "scale": {
-                "domain": ["Historical Emissions", "Projected Emissions"],
+                "domain": ["Historical Emissions", "Projected Emissions*"],
                 "range": ["steelblue", "green"]
               },
               "legend": {"title": "Legend"}
@@ -44,7 +44,7 @@
           "transform": [
             {"calculate": "year(datum['Financial Year'])", "as": "year"},
             {"filter": "datum.year > 2024"},
-            {"calculate": "'Projected Emissions'", "as": "series"}
+            {"calculate": "'Projected Emissions*'", "as": "series"}
           ],
           "mark": {"type": "line", "strokeDash": [6, 4]},
           "encoding": {
@@ -54,7 +54,7 @@
               "field": "series",
               "type": "nominal",
               "scale": {
-                "domain": ["Historical Emissions", "Projected Emissions"],
+                "domain": ["Historical Emissions", "Projected Emissions*"],
                 "range": ["steelblue", "green"]
               },
               "legend": {"title": "Legend"}
