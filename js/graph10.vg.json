@@ -14,9 +14,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/NotDodoVN/FIT2179-Assignment2/refs/heads/main/Datasets%20-%20wrangled/Graph%2010%20-%20Wrangled%20(24-25).csv"
   },
-  "resolve": {
-    "scale": { "y": "independent" }
-  },
+  "resolve": {"scale": {"y": "independent"}},
   "layer": [
     {
       "mark": {
@@ -29,19 +27,21 @@
         "x": {
           "field": "Crop",
           "type": "nominal",
-          "axis": { "title": "Crop", "labelAngle": 0 }
+          "axis": {"title": "Crop", "labelAngle": 0}
         },
         "y": {
           "field": "Production kt",
           "type": "quantitative",
+          "scale": {"domain": [0, 4000]},
           "axis": {
             "title": "Production (kt)",
-            "titleColor": "#4C78A8"
+            "titleColor": "#4C78A8",
+            "values": [0, 1000, 2000, 3000, 4000]
           }
         },
         "tooltip": [
-          { "field": "Crop", "type": "nominal" },
-          { "field": "Production kt", "type": "quantitative" }
+          {"field": "Crop", "type": "nominal"},
+          {"field": "Production kt", "type": "quantitative"}
         ]
       }
     }

@@ -17,7 +17,7 @@
     }
   ],
   "layer": [
-    {
+    { 
       "mark": {"type": "rule", "strokeWidth": 2},
       "encoding": {
         "x": {

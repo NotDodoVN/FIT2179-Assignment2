@@ -3,8 +3,8 @@
   "width": 400,
   "height": 225,
   "title": {
-    "text": "Water Use by Sector (2022-23)",
-    "subtitle": "Total: 10,634,566 ML",
+    "text": "Water Use by Sector (2022-23) in Australia",
+    "subtitle": "Total: 10,634,566 ML (Megalitres)",
     "fontSize": 18,
     "fontWeight": "bold",
     "subtitleFontSize": 13,
@@ -35,7 +35,26 @@
         "color": {
           "field": "Sectors",
           "type": "nominal",
-          "legend": { "title": "Sectors" }
+          "legend": { "title": "Sectors" },
+          "scale": {
+            "domain":[
+              "Agriculture",
+              "Electricity",
+              "Manufacturing",
+              "Mining",
+              "Other industries"
+            ]
+            ,
+            "range": 
+            [
+              "#1B69AD",
+              "#3887C0",
+              "#5BA3CF",
+              "#86BCDC",
+              "#AFD1E7"
+            ]
+          }
+          
         },
         "tooltip": [
           { "field": "Sectors", "type": "nominal" },
