@@ -10,7 +10,7 @@
     "font": "'Playfair Display', serif",
     "subtitleFont": "'DM Sans', sans-serif",
     "color": "#e8e6e0",
-    "subtitleColor": "#6b6b78",
+    "subtitleColor": "#e8e6e0",
     "offset": 10
   },
   "background": "transparent",

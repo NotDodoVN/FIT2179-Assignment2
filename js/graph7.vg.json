@@ -101,8 +101,10 @@
   "title": {
     "text": "Melbourne annual water storage change",
     "anchor": "start",
+    "subtitle": "% change compared to 1961-1990 average",
     "fontSize": 14,
-    "color": "#e8e6e0"
+    "color": "#e8e6e0",
+    "subtitleColor": "#e8e6e0"
   },
   "config": {
     "background": "#fafafa",

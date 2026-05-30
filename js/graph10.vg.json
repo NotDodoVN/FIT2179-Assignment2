@@ -7,8 +7,8 @@
     "subtitle": "Bars show production volume (kt)",
     "fontSize": 16,
     "fontWeight": "bold",
-    "subtitleFontSize": 12,
-    "subtitleColor": "#e8e6e0",
+    "subtitleFontSize": 13,
+    "subtitleColor": "gray",
     "anchor": "start"
   },
   "data": {
@@ -32,11 +32,9 @@
         "y": {
           "field": "Production kt",
           "type": "quantitative",
-          "scale": {"domain": [0, 4000]},
           "axis": {
             "title": "Production (kt)",
-            "titleColor": "#4C78A8",
-            "values": [0, 1000, 2000, 3000, 4000]
+            "titleColor": "#4C78A8"
           }
         },
         "tooltip": [

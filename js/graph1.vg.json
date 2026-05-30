@@ -4,8 +4,8 @@
     "text": "Australia's emission by sector",
     "anchor": "start",
     "subtitle": "MtCO₂e",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
+    "fontSize": 18,
+    "subtitleFontSize": 15,
     "color": "#e8e6e0",
     "subtitleColor": "#e8e6e0"
   },
@@ -28,8 +28,9 @@
   ],
   "mark": {"type": "area", "line": true, "opacity": 0.85},
   "encoding": {
-    "x": {"field": "YEAR", "type": "temporal", "title": "Year"},
+    "x": {"field": "YEAR", "type": "temporal", "title": "Year", "labelFontSize": 50},
     "y": {
+      "fontSize": 12,
       "aggregate": "sum",
       "field": "VALUE",
       "type": "quantitative",
@@ -57,7 +58,7 @@
           "#475569"      
         ]
       },
-      "legend": {"labelFontSize": 10}
+      "legend": {"labelFontSize": 12}
     },
     "tooltip": [
       {"field": "INDUSTRY", "title": "Industry"},

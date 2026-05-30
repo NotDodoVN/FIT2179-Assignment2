@@ -7,8 +7,7 @@
     "subtitle": "Total: 10,634,566 ML (Megalitres)",
     "fontSize": 18,
     "fontWeight": "bold",
-    "subtitleFontSize": 13,
-    "subtitleColor": "gray",
+    "subtitleColor": "#e8e6e0",
     "anchor": "start"
   },
   "data": {
