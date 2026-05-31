@@ -25,7 +25,7 @@
           "type": "ordinal",
           "sort": "ascending",
           "axis": {
-            "title": null,
+            "title": "Year",
             "labelAngle": 0,
             "labelFontSize": 10,
             "labelExpr": "datum.value % 5 === 0 ? datum.label : ''",
@@ -55,7 +55,7 @@
           "type": "ordinal",
           "sort": "ascending",
           "axis": {
-            "title": null,
+            "title": "Year",
             "labelAngle": 0,
             "labelFontSize": 10,
             "labelExpr": "datum.value % 5 === 0 ? datum.label : ''",

@@ -36,14 +36,14 @@
             "labelAngle": 0,
             "format": "%Y",
             "tickCount": { "interval": "year", "step": 5 },
-            "title": null,
+            "title": "Year",
             "grid": false
           }
         },
         "y": {
           "field": "Percentage change from baseline",
           "type": "quantitative",
-          "title": null,
+          "title": "Percentage change",
           "axis": {
             "tickCount": 5,
             "grid": true,
