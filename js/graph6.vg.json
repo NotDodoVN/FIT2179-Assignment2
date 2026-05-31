@@ -97,8 +97,7 @@
         "tooltip": [
           {"field": "State",     "type": "nominal",      "title": "State"},
           {"field": "Period",    "type": "nominal",      "title": "Period"},
-          {"field": "Incidents", "type": "quantitative", "title": "Incidents",       "format": ","},
-          {"field": "Log5",      "type": "quantitative", "title": "log₅(incidents)", "format": ".2f"}
+          {"field": "Incidents", "type": "quantitative", "title": "Incidents",       "format": ","}
         ]
       },
       "params": [

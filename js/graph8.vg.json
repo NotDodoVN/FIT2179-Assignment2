@@ -58,6 +58,7 @@
         "tooltip": [
           { "field": "Sectors", "type": "nominal" },
           {
+            "title": "Volume (Megalitre)",
             "field": "Value (Megalitre)",
             "type": "quantitative",
             "aggregate": "sum",
