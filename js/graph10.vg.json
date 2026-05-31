@@ -30,7 +30,7 @@
           "axis": {"title": "Crop", "labelAngle": 0}
         },
         "y": {
-          "field": "Production kt",
+          "field": "Production (kt)",
           "type": "quantitative",
           "axis": {
             "title": "Production (kt)",
@@ -39,7 +39,7 @@
         },
         "tooltip": [
           {"field": "Crop", "type": "nominal"},
-          {"field": "Production kt", "type": "quantitative"}
+          {"field": "Production (kt)", "type": "quantitative"}
         ]
       }
     }
