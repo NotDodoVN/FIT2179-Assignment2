@@ -3,7 +3,7 @@
 
   "width": 400,
   "height": 225,
-  "title": "Intensity of Wildfire across Australia for first half of 2026",
+  "title": "Intensity of Wildfire across Australia from April to May of 2026",
   "projection": {
     "type": "mercator"
   },
