@@ -30,7 +30,7 @@
           "axis": {"title": "Crop", "labelAngle": 0}
         },
         "y": {
-          "field": "Production (kt)",
+          "field": "Production kt",
           "type": "quantitative",
           "axis": {
             "title": "Production (kt)",
